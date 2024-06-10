@@ -1,0 +1,84 @@
+/* Reset.css */
+
+/* 通用的重置 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  /* 重置外边距 */
+  margin: 0;
+  /* 重置内边距 */
+  padding: 0;
+  /* 重置边框 */
+  border: 0;
+  /* 继承字体 */
+  font: inherit;
+  /* 基线对齐 */
+  vertical-align: baseline;
+}
+
+/* HTML5 元素重置 */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  /* 将 HTML5 新增的语义化标签显示为块级元素 */
+  display: block;
+}
+
+/* 去掉列表项的默认样式 */
+ul, ol {
+  /* 去除列表项的默认样式 */
+  list-style: none;
+}
+
+/* 去掉表单元素的默认样式 */
+button, input, select, textarea {
+  /* 重置外边距 */
+  margin: 0;
+  /* 垂直居中 */
+  vertical-align: middle;
+  /* 去除输入框的轮廓线 */
+  outline: none;
+}
+
+/* 使图片不会超出容器 */
+img {
+  /* 图片最大宽度为父容器的100% */
+  max-width: 100%;
+  /* 保持图片比例不变 */
+  height: auto;
+  /* 图片显示为块级元素 */
+  display: block;
+}
+
+/* 去掉表格的边框间距 */
+table {
+  /* 合并表格边框 */
+  border-collapse: collapse;
+  /* 设置单元格边框间距为0 */
+  border-spacing: 0;
+}
+
+/* 去掉输入框的默认外观 */
+input[type="text"],
+input[type="password"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="search"],
+textarea {
+  /* 去除 WebKit 浏览器的默认外观 */
+  -webkit-appearance: none;
+  /* 去除 Firefox 浏览器的默认外观 */
+  -moz-appearance: none;
+  /* 去除其他浏览器的默认外观 */
+  appearance: none;
+}

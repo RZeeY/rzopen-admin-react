@@ -1,0 +1,84 @@
+@import '../../styles/variable.less';
+
+@header-height: 64px;
+
+.bl-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(#ffffff, #f5f5f5 28%);
+  > .main-header {
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 64px;
+    padding: 0 @padding-m;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+    backdrop-filter: blur(8px);
+    transition: background-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    > .app-title {
+      font-size: 18px;
+      color: @text-color-1-light-model;
+      font-weight: bold;
+    }
+    > .header-actions {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      gap: 12px;
+      > .item {
+        font-size: 25px;
+        color: @gray-8-light-model;
+        > .user {
+          display: flex;
+          align-items: center;
+          > img {
+            position: relative;
+            top: -1px;
+            width: 41px;
+            height: 41px;
+            border-radius: 100px;
+            object-fit: cover;
+            margin-right: 6px;
+          }
+          > .user-name {
+            overflow: hidden;
+            max-width: 100px;
+            white-space: no-wrap;
+            font-size: 14px;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+  }
+  > .main-body {
+    min-height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    > .main-menu {
+      position: fixed;
+      top: @header-height;
+      z-index: 1;
+      overflow-y: auto;
+      height: calc(100vh - @header-height);
+      .ant-menu {
+        height: 100%;
+        background: transparent;
+      }
+    }
+    > .main-content {
+      flex: 1;
+      margin-left: 256px;
+      padding: @padding-m;
+    }
+  }
+}

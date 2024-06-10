@@ -1,0 +1,65 @@
+@import '../../styles/variable.less';
+
+.login-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+  .main-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: main-bg-ani 30s linear forwards;
+  }
+
+  .main-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    bottom: 96px;
+  }
+
+  .project-title {
+    padding-bottom: 24px;
+    font-size: 60px;
+    text-align: center;
+    color: #1477ff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 290px;
+    padding-top: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0px 1px 10px 0px rgb(0 0 0 / 13%);
+
+    .extra {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  @keyframes main-bg-ani {
+    from {
+      filter: blur(60px);
+      transform: scale3d(1.5, 1.5, 1.5);
+    }
+    to {
+      filter: blur(40px);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+}
